@@ -14,7 +14,7 @@ android {
 
         val buildNumber = System.getenv("BUILD_NUMBER")?.toIntOrNull() ?: 1
         versionCode = buildNumber
-        versionName = "2.4.$buildNumber"
+        versionName = "2.5.$buildNumber"
 
         resourceConfigurations.addAll(listOf("zh", "en"))
     }

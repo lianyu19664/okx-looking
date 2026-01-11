@@ -65,7 +65,8 @@ class MarketRepository {
                         it.get("last").asDouble else 0.0
                     vol * last
                 }
-                .take(120) // 限制 WS 订阅总数
+                // [修改] 移除 take(120) 限制，进行全量监控
+                //.take(120) 
                 .map { it.get("instId").asString }
         }
     }
